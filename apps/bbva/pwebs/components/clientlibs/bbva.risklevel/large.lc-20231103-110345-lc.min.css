@@ -1,0 +1,52 @@
+@media (min-width: 600px) {
+  .risklevel__message {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+@media (min-width: 600px) and (max-width: 991px) {
+  .risklevel__label {
+    -ms-flex-item-align: start;
+    align-self: start;
+  }
+}
+@media (min-width: 992px) {
+  .risklevel__label {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .risklevel__label {
+    width: 17%;
+  }
+  .risklevel__label--text {
+    font-size: 26px;
+  }
+  .risklevel__label--numeric.risklevel__label--col4,
+  .risklevel__label--text.risklevel__label--col4 {
+    text-align: center;
+    width: 15%;
+  }
+  .risklevel__label--col4 {
+    width: 10%;
+    text-align: right;
+  }
+  .risklevel__message .bbva-icon {
+    line-height: 10px;
+  }
+  .risklevel__message {
+    width: 82%;
+  }
+  .risklevel__message--col2 {
+    width: 41%;
+  }
+  .risklevel__message--col3 {
+    width: 27%;
+  }
+  .risklevel__message--col4 {
+    width: 20%;
+  }
+  .risklevel__item {
+    display: inline-block;
+    vertical-align: top;
+  }
+}

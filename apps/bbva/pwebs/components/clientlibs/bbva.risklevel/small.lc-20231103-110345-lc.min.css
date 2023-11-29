@@ -1,0 +1,98 @@
+.risklevel {
+  position: relative;
+  zoom: 1;
+  width: 100%;
+  display: block;
+}
+.risklevel::after,
+.risklevel::before {
+  content: " ";
+  display: block;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+.risklevel::after {
+  clear: both;
+}
+.risklevel__base {
+  padding: 40px 0 24px;
+}
+.risklevel__base.background--core-blue {
+  background-color: #004481;
+}
+.risklevel__base.background--navy {
+  background-color: #072146;
+}
+.risklevel__container {
+  border: 1px solid #bdbdbd;
+  margin: 0 16px;
+  background-color: #fff;
+}
+.risklevel__title {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #121212;
+  text-align: center;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 1px solid #979797;
+  padding: 8px 0;
+  color: #121212;
+}
+.risklevel__content {
+  padding: 8px 0;
+}
+.risklevel__group {
+  display: inline;
+}
+.risklevel__label {
+  font-family: BentonSansBBVA-Book, Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  color: #121212;
+  text-align: center;
+}
+.risklevel__label--text {
+  font-family: BentonSansBBVA-Book, Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  line-height: 32px;
+}
+.risklevel__label--digit {
+  color: #626262;
+}
+.risklevel__message {
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  text-align: left;
+  line-height: 10px;
+  color: #626262;
+}
+.risklevel__message .bbva-icon {
+  float: left;
+  color: #979797;
+  margin: 0 2px;
+  font-size: 13px;
+  line-height: 8px;
+}
+.risklevel__message .bbva-icon__5_077_exclamation {
+  margin: 0 4px;
+}
+.risklevel__message--col1 {
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+.risklevel__item {
+  padding: 8px;
+}
+@media (min-width: 0) and (max-width: 991px) {
+  .risklevel__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .risklevel__group {
+    width: 50%;
+  }
+}

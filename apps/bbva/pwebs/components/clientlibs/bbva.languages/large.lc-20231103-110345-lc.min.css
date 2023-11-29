@@ -1,0 +1,5 @@
+@media (min-width: 992px) {
+  .languages__item {
+    margin-right: 16px;
+  }
+}

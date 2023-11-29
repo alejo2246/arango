@@ -1,0 +1,222 @@
+:root {
+  --stickybanner-close-icon-color: #1973b8;
+  --stickybanner-close-icon-blue-background-color: #fff;
+}
+.dark-theme {
+  --stickybanner-close-icon-color: #5bbeff;
+  --stickybanner-close-icon-blue-background-color: #5bbeff;
+}
+.stickybanner {
+  position: relative;
+  zoom: 1;
+  width: 100%;
+  display: block;
+}
+.stickybanner::before,
+.stickybanner::after {
+  content: " ";
+  display: block;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+.stickybanner::after {
+  clear: both;
+}
+.stickybanner__base {
+  display: none;
+  display: inline-block;
+  position: fixed;
+  padding: 16px;
+  z-index: 7;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  will-change: transform;
+  -webkit-transform: translateX(calc(100% + 32px));
+  transform: translateX(calc(100% + 32px));
+  right: 16px;
+  margin-bottom: 8px;
+  width: calc(100% - 32px);
+}
+.dark-theme .stickybanner__base {
+  background-color: #050b0f;
+}
+@media (min-width: 600px) {
+  .stickybanner__base {
+    -webkit-transform: translateX(312px);
+    transform: translateX(312px);
+    max-width: 296px;
+    bottom: 0;
+    margin-bottom: 16px;
+  }
+}
+.stickybanner__base.animation--enabled {
+  -webkit-transition: -webkit-transform 0.66667s
+    cubic-bezier(0.24, 0.22, 0.31, 1.07);
+  transition: -webkit-transform 0.66667s cubic-bezier(0.24, 0.22, 0.31, 1.07);
+  transition: transform 0.66667s cubic-bezier(0.24, 0.22, 0.31, 1.07);
+  transition: transform 0.66667s cubic-bezier(0.24, 0.22, 0.31, 1.07),
+    -webkit-transform 0.66667s cubic-bezier(0.24, 0.22, 0.31, 1.07);
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.stickybanner__header {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+@media (min-width: 600px) {
+  .stickybanner__header {
+    position: relative;
+    text-align: right;
+    top: 0;
+    right: 0;
+  }
+}
+.stickybanner__close {
+  color: var(--stickybanner-close-icon-color, #1973b8);
+  padding: 0;
+  border: 0;
+}
+.keyboard-focus .stickybanner__close:focus {
+  outline: 1px solid #1973b8;
+  outline-offset: 4px;
+}
+.background--navy .stickybanner__close {
+  color: #5bbeff;
+}
+.keyboard-focus .background--navy .stickybanner__close:focus {
+  outline: 1px solid #5bbeff;
+  outline-offset: 4px;
+}
+.background--medium-blue .stickybanner__close {
+  color: var(--stickybanner-close-icon-blue-background-color, #fff);
+}
+.keyboard-focus .background--medium-blue .stickybanner__close:focus {
+  outline: 1px solid #fff;
+  outline-offset: 4px;
+}
+.stickybanner__close .bbva-icon {
+  margin: 0;
+  font-size: 24px;
+}
+.stickybanner__image {
+  height: 48px;
+  width: 48px;
+}
+@media (min-width: 600px) {
+  .stickybanner__image {
+    height: 64px;
+    width: 64px;
+    margin-bottom: 16px;
+  }
+}
+.stickybanner__container {
+  text-align: left;
+}
+.stickybanner__container--image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 16px;
+  -moz-column-gap: 16px;
+  column-gap: 16px;
+}
+.stickybanner__container--image .stickybanner__image {
+  margin: auto 0;
+}
+@media (min-width: 600px) {
+  .stickybanner__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+  }
+  .stickybanner__container .stickybanner__image {
+    margin-bottom: 16px;
+  }
+}
+.stickybanner__title {
+  font-family: "BentonSansBBVA-Medium", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  width: calc(100% - 32px);
+}
+@media (min-width: 992px) {
+  .stickybanner__title {
+    font-size: 18px;
+  }
+}
+@media (min-width: 600px) {
+  .stickybanner__title {
+    margin-bottom: 16px;
+    font-family: "BentonSansBBVA-Medium", Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-size: 26px;
+    width: 100%;
+  }
+}
+@media (min-width: 600px) and (min-width: 992px) {
+  .stickybanner__title {
+    font-size: 26px;
+  }
+}
+@media (min-width: 992px) {
+  .stickybanner__title {
+    font-family: "BentonSansBBVA-Medium", Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+@media (min-width: 992px) and (min-width: 992px) {
+  .stickybanner__title {
+    font-size: 26px;
+  }
+}
+.stickybanner__text--mobile {
+  margin-bottom: 16px;
+  margin-right: 24px;
+}
+@media (min-width: 600px) {
+  .stickybanner__text--mobile {
+    display: none;
+  }
+}
+.stickybanner__text--mobile p {
+  margin-top: 0;
+}
+.stickybanner__text--desktop {
+  display: none;
+}
+@media (min-width: 600px) {
+  .stickybanner__text--desktop {
+    display: block;
+    margin-bottom: 16px;
+  }
+}
+.stickybanner__button {
+  margin-bottom: 16px;
+}
+.stickybanner__button:last-child {
+  margin: 0;
+}
+.stickybanner__link .link__base {
+  display: inline-block;
+}
+.background--medium-blue .stickybanner__link .link__base {
+  color: white;
+}
+.background--medium-blue .stickybanner__link .link__base .bbva-svgicon {
+  -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(100%)
+    saturate(0) hue-rotate(204deg) brightness(104%) contrast(102%);
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0)
+    hue-rotate(204deg) brightness(104%) contrast(102%);
+}

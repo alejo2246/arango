@@ -1,0 +1,58 @@
+:host {
+  --_bg-color: var(
+    --bbva-web-navigation-menu-bg-color,
+    var(--colorsPrimaryCoreDarkened, #072146)
+  );
+  --_color: var(
+    --bbva-web-navigation-menu-color,
+    var(--colorsPrimaryCoreLightened, #ffffff)
+  );
+  --_focus-outline-color: var(
+    --bbva-web-navigation-menu-focus-outline-color,
+    var(--colorsPrimaryCoreLightened, #ffffff)
+  );
+  --_logo-exit-height: var(--bbva-web-navigation-menu-logo-exit-height, 8.5rem);
+  --_scroll-gradient-end-color: var(
+    --bbva-web-navigation-menu-scroll-gradient-end-color,
+    rgba(7, 33, 70, 1)
+  );
+  --_scroll-gradient-start-color: var(
+    --bbva-web-navigation-menu-scroll-gradient-start-color,
+    rgba(7, 33, 70, 0)
+  );
+  --_scrollbar-thumb-color: var(
+    --bbva-web-navigation-menu-scrollbar-thumb-color,
+    var(--colorsPrimaryCoreLightened, #ffffff)
+  );
+  --_scrollbar-track-color: var(
+    --bbva-web-navigation-menu-scrollbar-track-color,
+    var(--colorsPrimaryCoreDark, #043263)
+  );
+  --_transition-delay: var(--bbva-web-navigation-menu-transition-delay, 0s);
+  --bbva-web-navigation-menu-item-action-transition-delay: var(
+    --_transition-delay
+  );
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 15rem;
+  height: 100%;
+  background: var(--_bg-color);
+  font-size: var(--typographyTypeSmall, 0.9375rem);
+  line-height: var(--lineHeightTypeSmall, 1.5rem);
+  font-weight: var(--fontFacePrimaryMediumFontWeight, 500);
+  color: var(--_color);
+}
+#announcer {
+  position: fixed;
+  height: 0;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+}
+bbva-web-navigation-menu {
+  height: 100vh;
+}

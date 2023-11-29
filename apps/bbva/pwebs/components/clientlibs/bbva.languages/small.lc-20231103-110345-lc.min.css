@@ -1,0 +1,48 @@
+.languages {
+  position: relative;
+  zoom: 1;
+  width: 100%;
+  display: block;
+}
+.languages::after,
+.languages::before {
+  content: " ";
+  display: block;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+.languages::after {
+  clear: both;
+}
+.languages__list {
+  display: inline-block;
+}
+.languages__item {
+  font-family: BentonSansBBVA-Book, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: #fff;
+  display: inline-block;
+  margin-right: 8px;
+}
+.footer__languages .languages__item {
+  font-size: 15px;
+  margin-right: 16px;
+}
+.languages__item:last-child {
+  margin-right: 0;
+}
+.languages__item--active {
+  font-family: BentonSansBBVA-Bold, Helvetica, Arial, sans-serif;
+}
+.languages__item a {
+  color: #fff;
+  opacity: 0.7;
+}
+.languages__item a:hover {
+  opacity: 1;
+}
+.languages__alternate {
+  display: inline-block;
+}
